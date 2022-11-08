@@ -9,12 +9,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json())
 //connect to mongodb
-const dbURI = 'mongodb+srv://SySagar:sy_sagar123@vssut-api-backend.uznpbh6.mongodb.net/?retryWrites=true&w=majority'
+const dbURI = process.env.dbBuri
 mongoose.connect(dbURI)
 .then((result)=>{
 console.log('connected to db')
 
-app.listen(3000)}
+app.listen(3000 || process.env.PORT)}
 ).catch((err)=>console.log(err));
 
 app.use(blogRoutes);
