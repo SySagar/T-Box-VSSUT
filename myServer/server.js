@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogroutes');
 const bodyParser = require("body-parser")
-require('dotenv').config()
+require('dotenv').config({path : './.env'})
 
 const app = express();
 app.use(bodyParser.urlencoded({
