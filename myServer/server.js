@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogroutes');
 const bodyParser = require("body-parser")
+require('dotenv').config()
 
 const app = express();
 app.use(bodyParser.urlencoded({
@@ -9,7 +10,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json())
 //connect to mongodb
-const dbURI = process.env.dbBuri
+const dbURI = process.env.dbUri
 mongoose.connect(dbURI)
 .then((result)=>{
 console.log('connected to db')
