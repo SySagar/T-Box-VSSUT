@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogroutes');
 const bodyParser = require("body-parser")
-require('dotenv').config({path : './.env'})
+require('dotenv').config()
 
 const app = express();
 app.use(bodyParser.urlencoded({
@@ -15,7 +15,8 @@ mongoose.connect(dbURI)
 .then((result)=>{
 console.log('connected to db')
 
-app.listen(3000 || process.env.PORT)}
+app.listen(3000 || process.env.PORT)
+}
 ).catch((err)=>console.log(err));
 
 app.use(blogRoutes);
