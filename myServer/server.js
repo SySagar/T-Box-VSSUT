@@ -15,8 +15,8 @@ mongoose.connect(dbURI)
 .then((result)=>{
 console.log('connected to db')
 
+app.use(blogRoutes);
+
 app.listen(3000 || process.env.PORT)
 }
 ).catch((err)=>console.log(err));
-
-app.use(blogRoutes);
