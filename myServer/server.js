@@ -3,8 +3,14 @@ const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogroutes');
 const bodyParser = require("body-parser")
 require('dotenv').config()
-
+const cors = require("cors")
 const app = express();
+
+app.use(cors({
+    origin:"*",
+    methods: ["GET"]
+}))
+
 app.use(bodyParser.urlencoded({
     extended:true
 }));
