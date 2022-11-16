@@ -13,11 +13,11 @@ export default function ImageCard({clubName, clubImage}) {
     <Card 
     elevation={2}
     className="mImageCard"
-    sx={{ maxWidth: 85, maxHeight: 95 , margin:1}}>
+    sx={{ maxWidth: 85, maxHeight: 85 , margin:1 , borderRadius:3 , borderBlockWidth:0  , borderColor:'#929094'}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height={50}
+          height={85}
           image={clubImage}
           alt="casual image"
         
@@ -26,10 +26,7 @@ export default function ImageCard({clubName, clubImage}) {
           <Typography gutterBottom variant="h6"  color="black" fontFamily="Chakra Petch">
             {clubName}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
+        
         </CardContent>
       </CardActionArea>
     </Card>

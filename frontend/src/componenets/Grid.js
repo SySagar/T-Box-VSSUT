@@ -30,7 +30,7 @@ export default function MGrid() {
     //   </Grid>
     //   </div>
 
-    <div className="box">
+    <div className="box" >
         <div className="Enigma">
             <ImageCard clubName={"Enigma"} clubImage={"/enigma.jpeg"}/>
         </div>

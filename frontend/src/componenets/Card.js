@@ -39,11 +39,6 @@ export default function MCard() {
                 
                 <div className="headline">
                     <CardHeader
-
-                        
-                          
-                        
-                    
                         title='Tip of the day!'
                     >
                         <Typography variant="body2" color="white">

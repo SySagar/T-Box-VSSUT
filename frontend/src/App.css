@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch&family=Cinzel:wght@600&family=Quicksand:wght@300;400;500;600;700&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch&family=Cinzel:wght@600&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;500&display=swap');
 .App {
   text-align: center;
 }
@@ -46,16 +46,13 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 32px;
+
 gap: 32px;
 isolation: isolate;
 
-position: relative;
-width: 1512px;
-height: 982px;
-
-/* M3/black */
-
+position: absolute;
+width: 1482px;
+height: 882px;
 background: #000000;
 }
 
@@ -70,9 +67,8 @@ gap: 32px;
 
 width: 905px;
 height: 746px;
-
 background: rgba(0, 0, 0, 0.63);
-backdrop-filter: blur(25px);
+backdrop-filter: blur(10px);
 /* Note: backdrop-filter has minimal browser support */
 
 border-radius: 16px;
@@ -104,7 +100,7 @@ z-index: 2;
 {
   width: 200px;
   height: 50px;
-  margin-left: 260px;
+  margin-left: 400px;
   z-index: 3;
   align-self: flex-start;
 }
@@ -123,7 +119,7 @@ z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+
   
   width: 360px;
   height: 240px;
@@ -133,8 +129,12 @@ z-index: 4;
   
   token=md.sys.color.outline
   */
-  border: 1px solid #929094;
-  border-radius: 12px;
+
+  border-radius: 5px;
+  border-top: 2.5px solid #929094;
+  border-right: 2.5px solid #929094;
+  border-left: 1px solid #929094;
+  border-bottom: 1px solid #929094;
   
   /* Inside auto layout */
   
@@ -148,6 +148,8 @@ z-index: 4;
 {
  display: flex;
  flex-direction: row;
+ align-content: space-around;
+ margin-left: 40px;
 }
 
 .mImageCard{
@@ -208,7 +210,7 @@ flex-grow: 0;
 position: absolute;
 width: 479px;
 height: 479px;
-left: -69px;
+left: -49px;
 top: -95px;
 
 background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
@@ -225,7 +227,7 @@ z-index: 0;
   position: absolute;
   width: 709px;
   height: 709px;
-  right: 54px;
+  right: 44px;
   bottom: -174px;
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
@@ -317,6 +319,15 @@ flex-grow: 1;
   color:white;
   margin-left: 10px;
   background-color:rgba(0,0,0,0.5); 
+  border-color: white ;
+  z-index: 5;
+}
+
+.search-bar {
+  border-radius:5px;
+  border-color: white ;
+  z-index: 5;
+  border: #61dafb;
 }
 
 .down-cards-layout{

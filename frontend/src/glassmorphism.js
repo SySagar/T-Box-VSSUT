@@ -59,13 +59,13 @@ export default function glassmorphism() {
 
                 <div className="Header">
 
-                  <div className="frame1">
+                  <div className="frame1" align="center">
 
                     <div className="timeAndDate">
                       <Typography
                         variant='h2'
                         marginLeft={15}
-                        fontFamily='Cinzel'
+                        fontFamily='Roboto'
                         alignContent='left'
                         color="white"
 
