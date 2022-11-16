@@ -13,16 +13,17 @@ export default function ImageCard({clubName, clubImage}) {
     <Card 
     elevation={2}
     className="mImageCard"
-    sx={{ maxWidth: 85, maxHeight: 115 , margin:1}}>
+    sx={{ maxWidth: 85, maxHeight: 95 , margin:1}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height={70}
+          height={50}
           image={clubImage}
           alt="casual image"
+        
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div" alignContent={'left'}>
+          <Typography gutterBottom variant="h6"  color="black" fontFamily="Chakra Petch">
             {clubName}
           </Typography>
           <Typography variant="body2" color="text.secondary">

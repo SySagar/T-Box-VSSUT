@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect , useState } from 'react'
+import { useEffect, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -8,51 +8,74 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 
 export default function MCard() {
 
-  const [content, setContent] = useState()
-  useEffect(() => {
-  
-       fetch('https://t-box-backend.onrender.com/get-blog', {
-      method: 'GET'
-    }).then(res => res.json()).then((data) => {
-        setContent(data) ;
-        console.log(data.title);
-        console.log(data.snippet);})
-  },[])
-  
-  const onRefresh = async () => {
-   
-    fetch('https://t-box-backend.onrender.com/get-blog', {
-        method: 'GET'
-      }).then(res => res.json()).then((data) => {
-          setContent(data) ;
-          console.log(data.title);
-          console.log(data.snippet);})
-    
-  }
-   
+    const [content, setContent] = useState()
+    useEffect(() => {
+
+        fetch('https://t-box-backend.onrender.com/get-blog', {
+            method: 'GET'
+        }).then(res => res.json()).then((data) => {
+            setContent(data);
+            console.log(data.title);
+            console.log(data.snippet);
+        })
+    }, [])
+
+    const onRefresh = async () => {
+
+        fetch('https://t-box-backend.onrender.com/get-blog', {
+            method: 'GET'
+        }).then(res => res.json()).then((data) => {
+            setContent(data);
+            console.log(data.title);
+            console.log(data.snippet);
+        })
+
+    }
+
     return (
-        <div>
-            <Card elevation={4}> 
-                <CardHeader
+        <Card elevation={4}>
+             <div className="mcard">
             
-                    action={
-                        <IconButton onClick={(e)=>onRefresh()}>
-                            <RefreshIcon />
-                        </IconButton>
-                    }
-                    title='Tip of the day!'
+                
+                <div className="headline">
+                    <CardHeader
+
+                        
+                          
+                        
+                    
+                        title='Tip of the day!'
                     >
-                </CardHeader>
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary">
-                       
-                        {content  && content.title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                       {content && content.snippet}
-                   </Typography>
-                </CardContent>
-            </Card>
-        </div>
+                        <Typography variant="body2" color="white">
+
+                            {content && content.title}
+                        </Typography>
+                    </CardHeader>
+                </div>
+
+                <div className="supporting-text">
+                    <CardContent>
+
+                        <div className="content">
+                            <Typography variant="body2" color="white">
+                                {content && content.snippet}
+                            </Typography>
+                        </div>
+
+                        
+
+                    </CardContent>
+
+                        <div className="refresh">
+                        <IconButton  onClick={(e) => onRefresh()}>
+                                <RefreshIcon />
+                            </IconButton>
+                        </div>
+                        
+                </div>
+
+                </div>
+         </Card>
+        
     )
 }
