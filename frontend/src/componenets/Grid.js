@@ -32,15 +32,15 @@ export default function MGrid() {
 
     <div className="box">
         <div className="Enigma">
-            <ImageCard />
+            <ImageCard clubName={"Enigma"} clubImage={"/enigma.jpeg"}/>
         </div>
 
         <div className="Robotics">
-        <ImageCard />
+        <ImageCard clubName={"Robotics"} clubImage={"/robotics.png"}/>
         </div>
 
         <div className="IIC">
-        <ImageCard />
+        <ImageCard clubName={"IIC"} clubImage={"/IIC.png"}/>
         </div>
     </div>
     

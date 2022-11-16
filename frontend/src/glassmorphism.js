@@ -88,9 +88,9 @@ export default function glassmorphism() {
                 Google
               </Typography>
 
-              {/* <div className="clubs">
+              <div className="clubs">
               <Grid/>
-            </div> */}
+            </div>
 
               <div className="item-group2">
 
