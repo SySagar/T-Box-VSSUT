@@ -59,7 +59,7 @@ export default function glassmorphism() {
 
                 <div className="Header">
 
-                  <div className="frame1" align="center">
+                  <div className="frame1" >
 
                     <div className="timeAndDate">
                       <Typography

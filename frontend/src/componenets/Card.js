@@ -52,7 +52,7 @@ export default function MCard() {
                     <CardContent>
 
                         <div className="content">
-                            <Typography variant="body2" color="white">
+                            <Typography variant="body1" color="white">
                                 {content && content.snippet}
                             </Typography>
                         </div>

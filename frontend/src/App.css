@@ -52,7 +52,7 @@ isolation: isolate;
 
 position: absolute;
 width: 1482px;
-height: 882px;
+height: 982px;
 background: #000000;
 }
 
@@ -103,6 +103,7 @@ z-index: 2;
   margin-left: 400px;
   z-index: 3;
   align-self: flex-start;
+
 }
 
 .panda
