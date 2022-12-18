@@ -10,6 +10,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
 import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
+import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 // import { makeStyles } from '@mui/styles'
 
 export default function glassmorphism() {
@@ -133,6 +134,12 @@ export default function glassmorphism() {
                       color="white">
                       Chill spots
                     </Typography>
+                    <div className='setting'>
+
+                    <IconButton onClick={(e) => {}}>
+                <SettingsTwoToneIcon />
+            </IconButton>
+                    </div>
                   </div>
 
                   <div className="frame3">

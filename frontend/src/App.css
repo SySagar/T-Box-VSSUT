@@ -359,6 +359,12 @@ align-self: stretch;
 flex-grow: 0;
 }
 
+.setting
+{
+  padding-left: 180px;
+  margin-left: 55px;
+}
+
 .down-cards
 {
   box-sizing: border-box;
