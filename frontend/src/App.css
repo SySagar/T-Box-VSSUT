@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch&family=Cinzel:wght@600&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;500&display=swap');
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+
 }
 
 .App-logo {
@@ -50,12 +53,21 @@ align-items: center;
 gap: 32px;
 isolation: isolate;
 
-position: absolute;
+position: relative;
 width: 1482px;
 height: 982px;
 background: #000000;
-}
+margin: 0;
+padding: 0;
+/* top:250px; */
 
+
+}
+.glassmorphism .App{
+  padding: 0;
+  margin:0;
+  overflow: hidden !important;
+}
 .form{
 /* Auto layout */
 
@@ -232,7 +244,7 @@ z-index: 0;
   bottom: -174px;
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  
+  /* overflow: hidden; */
   /* Inside auto layout */
   
   flex: none;
@@ -458,4 +470,14 @@ transform: scale(1.5);
   display: flex;
   flex-direction: row;
   align-content: space-between;
+}
+@media (min-width: 1070px) { 
+.todos-container{
+  width: 1382px;
+height: 916px;
+}
+}
+.root{
+  padding: 0;
+  margin: 0;
 }
