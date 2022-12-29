@@ -9,6 +9,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
 import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
+import Todo from './componenets/Todo';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 // import { makeStyles } from '@mui/styles'
 
@@ -44,9 +45,13 @@ export default function glassmorphism() {
   return (
     <div className="glassmorphism">
 
+
       <div className="App">
+        
 
         <div className="todos-container">
+
+        <Todo></Todo>
 
           <div className="circle"></div>
           <div className="circle2"></div>
