@@ -4,7 +4,6 @@ import { format } from 'date-fns'
 import { IconButton, Typography } from '@mui/material';
 import moment from 'moment';
 import cat from './animations/cat.json'
-import panda from './animations/panda.json'
 import Lottie from "lottie-react"
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
@@ -21,6 +20,13 @@ export default function glassmorphism() {
 
   };
 
+  const SearchQuery = (e)=>{
+
+    var newPageUrl = "https://www.google.com/search?q="+e
+
+    window.open(newPageUrl, "_blank") 
+    
+  }
 
 
   const time = moment().format("HH:mm");
@@ -46,13 +52,13 @@ export default function glassmorphism() {
           <div className="circle2"></div>
 
           <div className="cat">
-              <Lottie animationData={cat}></Lottie>
-            </div>
-             
+            <Lottie animationData={cat}></Lottie>
+          </div>
+
 
           <form className="form" onSubmit={handleSubmit}>
 
-            
+
 
             <div className="fullcontent">
 
@@ -102,15 +108,28 @@ export default function glassmorphism() {
                   Google
                   </Typography> */}
 
+
                   <div className="search-bar">
 
-                    <input type="text"
+                    {/* <script async src="https://cse.google.com/cse.js?cx=23f11aef5a1c8419d">
+                    </script>
+                    <div class="gcse-search"></div> */}
 
+                    <input type="text"
+                      
                       id="Google"
                       placeholder="Search something..."
                       name="Google"
 
+                      onKeyPress={event => {
+                        if (event.key === 'Enter') {
+                          SearchQuery(document.getElementById('Google').value)
+                        }
+                      }}
+
                       required />
+
+
 
                     {/* <IconButton type="submit"
                       className="form-submit-btn">
@@ -136,9 +155,9 @@ export default function glassmorphism() {
                     </Typography>
                     <div className='setting'>
 
-                    <IconButton onClick={(e) => {}}>
-                <SettingsTwoToneIcon />
-            </IconButton>
+                      <IconButton onClick={(e) => { }}>
+                        <SettingsTwoToneIcon />
+                      </IconButton>
                     </div>
                   </div>
 
@@ -174,17 +193,17 @@ export default function glassmorphism() {
 
               </div>
 
-           
-             
+
+
 
             </div>
 
 
 
-          
+
           </form>
 
-         
+
         </div>
 
 

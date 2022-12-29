@@ -20,7 +20,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,24 +48,14 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
-gap: 32px;
-isolation: isolate;
-
-position: relative;
-width: 1482px;
-height: 982px;
+height: 100vh;
+gap: 2px;
 background: #000000;
-margin: 0;
-padding: 0;
-/* top:250px; */
-
 
 }
 .glassmorphism .App{
   padding: 0;
   margin:0;
-  overflow: hidden !important;
 }
 .form{
 /* Auto layout */
@@ -74,22 +63,14 @@ padding: 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 16px;
+padding: 10px;
 gap: 32px;
-
-width: 905px;
-height: 746px;
+/* background: #61dafb; */
+max-height: 650px;
 background: rgba(0, 0, 0, 0.63);
 backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
-
 border-radius: 16px;
-
 /* Inside auto layout */
-
-flex: none;
-order: 2;
-flex-grow: 0;
 z-index: 2;
 }
 
@@ -99,7 +80,7 @@ z-index: 2;
   width:60px; 
   height:60px; 
   border-radius:5px;
-  margin-left: 10px;
+  margin-left: 15px;
   border:none;
   background-color:rgba(255,255,255,0.5);
   color:black;
@@ -112,19 +93,9 @@ z-index: 2;
 {
   width: 200px;
   height: 50px;
-  margin-left: 400px;
+  margin-left: 300px;
   z-index: 3;
   align-self: flex-start;
-
-}
-
-.panda
-{
-  width: 270px;
-  height: 50px;
-  align-content: flex-end;
-margin-left: 800px;
-z-index: 4;
 }
 
 .mcard 
@@ -132,8 +103,6 @@ z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  
   width: 360px;
   height: 240px;
 
@@ -221,10 +190,10 @@ flex-grow: 0;
 .circle
 {
 position: absolute;
-width: 479px;
-height: 479px;
-left: -49px;
-top: -95px;
+width: 389px;
+height: 389px;
+left: -29px;
+top: -45px;
 
 background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
@@ -238,10 +207,10 @@ z-index: 0;
 
 .circle2{
   position: absolute;
-  width: 709px;
-  height: 709px;
-  right: 44px;
-  bottom: -174px;
+  width: 509px;
+  height: 509px;
+  bottom: -361px;
+  left: 844px;
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   /* overflow: hidden; */
@@ -343,11 +312,17 @@ flex-grow: 1;
   border: #61dafb;
 }
 
+input:hover {
+
+  box-shadow: 0px 1px 3px rgb(192, 185, 185);
+
+}
+
 .down-cards-layout{
   display: flex;
 flex-direction: row;
 align-items: flex-start;
-padding: 32px;
+padding: 22px;
 gap: 24px;
 width: 873px;
 height: 270px;
