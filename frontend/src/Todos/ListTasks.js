@@ -1,19 +1,18 @@
 import { MdDone } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 
-
 export default function ListTasks(props) {
   return (
-    <div className="container mt-5">
-      <ul className="list-group align-items-center">
+    <div className="container">
+      <ul className="list-group">
         {props.tasksList.map((element) => {
           return (
-            <li className="list-group-item w-50">
-              <div className="row justify-content-around">
-                <div className="col-9">
+            <li className="list-group-item">
+              <div className="Row ">
+                <div className="Col">
                 {element.strike ?<p className="vertical-center"><del>{element.text}</del></p> : <p className="vertical-center">{element.text}</p>}
                 </div>
-                <div className="col-3 px-0">
+                <div className="CCol">
                 <button
                   className="btn btn-success"
                   style={{ height: "fit-content", marginRight: "10px"}}

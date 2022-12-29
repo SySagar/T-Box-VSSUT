@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { IconButton } from '@mui/material';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import "../App.css";
-import ListTasks from "../Todo/ListTasks";
-import InputTask from "../Todo/InputTask";
-import "bootstrap/dist/css/bootstrap.min.css";
+import ClearIcon from '@mui/icons-material/Clear';
+import ListTasks from "../Todos/ListTasks";
+import InputTask from "../Todos/InputTask";
 
 export default function Todo() {
   const [modal, setModal] = useState(false);
@@ -13,7 +13,7 @@ export default function Todo() {
 
   const addTasks = (task) => {
     let tempTasks = tasks["tasks"];
-    task = { id: tempTasks.length + 1, text: task, strike: false};
+    task = { id: tempTasks.length + 1, text: task, strike: false };
     tempTasks.push(task);
     setTask({ tasks: tempTasks });
   };
@@ -47,7 +47,9 @@ export default function Todo() {
     setModal(!modal);
   };
 
-  if(modal) {
+  console.log(modal)
+
+  if (modal) {
     document.body.classList.add('active-modal')
   } else {
     document.body.classList.remove('active-modal')
@@ -58,32 +60,31 @@ export default function Todo() {
       {/* <button  className="btn-modal">
         Open
       </button> */}
-      <IconButton class="btn-modal" onClick={toggleModal} style={{ color: "red" }} aria-label="delete">
-  <FormatListBulletedIcon />
-</IconButton>
+      <div className="btn-modal">
+        <IconButton onClick={toggleModal} style={{ color: "red" }} aria-label="delete">
+          <FormatListBulletedIcon />
+        </IconButton>
+      </div>
+
+
 
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-            <h2>Hello Modal</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              perferendis suscipit officia recusandae, eveniet quaerat assumenda
-              id fugit, dignissimos maxime non natus placeat illo iusto!
-              Sapiente dolorum id maiores dolores? Illum pariatur possimus
-              quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-              placeat tempora vitae enim incidunt porro fuga ea.
-            </p>
+            <h2>Todos</h2>
+
             <InputTask addTaskCallback={addTasks} />
-      <ListTasks tasksList={tasks["tasks"]} removeTaskCallback={removeTasks} strikeTaskCallback={strikeTask}/>
-            <button className="close-modal" onClick={toggleModal}>
-              CLOSE
-            </button>
+            <ListTasks tasksList={tasks["tasks"]} removeTaskCallback={removeTasks} strikeTaskCallback={strikeTask} />
+            <div className="close-modal">
+              <IconButton onClick={toggleModal} style={{ color: "white" }} aria-label="delete">
+                <ClearIcon />
+              </IconButton>
+            </div>
           </div>
         </div>
       )}
-      
+
     </>
   );
 }
