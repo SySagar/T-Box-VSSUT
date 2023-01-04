@@ -5,6 +5,7 @@ import "../App.css";
 import ClearIcon from '@mui/icons-material/Clear';
 import ListTasks from "../Todos/ListTasks";
 import InputTask from "../Todos/InputTask";
+import Storage from './Storage'
 
 export default function Todo() {
   const [modal, setModal] = useState(false);
@@ -16,6 +17,8 @@ export default function Todo() {
     task = { id: tempTasks.length + 1, text: task, strike: false };
     tempTasks.push(task);
     setTask({ tasks: tempTasks });
+
+    Storage(task);
   };
 
   const removeTasks = (taskid) => {
