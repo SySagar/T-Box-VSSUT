@@ -53,6 +53,7 @@ gap: 2px;
 background: #000000;
 
 }
+
 .glassmorphism .App{
   padding: 0;
   margin:0;
@@ -192,8 +193,8 @@ flex-grow: 0;
 position: absolute;
 width: 389px;
 height: 389px;
-left: -29px;
-top: -45px;
+left: 49px;
+top: -55px;
 
 background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
@@ -207,10 +208,10 @@ z-index: 0;
 
 .circle2{
   position: absolute;
-  width: 509px;
-  height: 509px;
-  bottom: -361px;
-  left: 844px;
+  width: 489px;
+  height: 489px;
+  bottom: -280px;
+  left: 944px;
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   /* overflow: hidden; */
@@ -452,13 +453,34 @@ transform: scale(1.5);
   flex-direction: row;
   align-content: space-between;
 }
-@media (min-width: 1070px) { 
+@media (min-width: 1024px) { 
 .todos-container{
-  width: 1382px;
-height: 916px;
+  width: 100vw;
+height: 140vh;
 }
+
+.circle{
+position: absolute;
+width: 389px;
+height: 389px;
+left: 59px;
+top: -5px;
 }
-.root{
-  padding: 0;
-  margin: 0;
+
+@media (max-width: 1370px) { 
+ .circle2{
+  left:700px;
+ }
+
+}
+@media (max-width: 1270px) { 
+  .circle2{
+   left:600px;
+  }
+  @media (max-width: 1170px) { 
+    .circle2{
+     left:500px;
+    }
+ }
+}
 }
