@@ -15,8 +15,7 @@ export default function MCard() {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
-            console.log(data.title);
-            console.log(data.snippet);
+            
         })
     }, [])
 
@@ -26,8 +25,7 @@ export default function MCard() {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
-            console.log(data.title);
-            console.log(data.snippet);
+           
         })
 
     }

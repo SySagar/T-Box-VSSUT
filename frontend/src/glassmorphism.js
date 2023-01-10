@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.css';
+import { useState } from "react";
 import { format } from 'date-fns'
 import { IconButton, Typography } from '@mui/material';
 import moment from 'moment';
 import cat from './animations/cat.json'
 import Lottie from "lottie-react"
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+// import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
 import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
-// import { makeStyles } from '@mui/styles'
+import SetUpLinks from './componenets/SetLinks'
 
-export default function glassmorphism() {
+export default function Glassmorphism() {
 
   const handleSubmit = (e) => {
 
@@ -26,6 +27,22 @@ export default function glassmorphism() {
 
     window.open(newPageUrl, "_blank") 
     
+  }
+
+  
+
+
+  const [modal, setModal] = useState(false);
+  
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  const SetLinks = ()=>{
+    toggleModal()
+
+    SetUpLinks(modal)
+    console.log("pressed");
   }
 
 
@@ -155,7 +172,7 @@ export default function glassmorphism() {
                     </Typography>
                     <div className='setting'>
 
-                      <IconButton onClick={(e) => { }}>
+                      <IconButton onClick={ SetLinks}>
                         <SettingsTwoToneIcon />
                       </IconButton>
                     </div>
