@@ -19,17 +19,21 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const openYT= async () => {
 
+    window.open("https://www.youtube.com/", "_blank")
 
 }
 
 const openGithub= async () => {
 
+    const github = localStorage.getItem('Github');
+    window.open('https://github.com/'+github, "_blank")
 
 }
 
 const openTwitter= async () => {
 
-
+    const twitter = localStorage.getItem('Twitter');
+    window.open('https://twitter.com/'+twitter, "_blank")
 
 }
 
@@ -42,7 +46,7 @@ export default function MGrid2() {
         <div className="box2">
             <div className="Youtube">
             <div className="links_style">
-            <IconButton onClick={(e) => openYT()}>
+            <IconButton className='ytbtn' onClick={(e) => openYT()}>
                 <YouTubeIcon />
             </IconButton>
             </div>
@@ -51,7 +55,7 @@ export default function MGrid2() {
             
             <div className="Twitter">
             <div className="links_style">
-                <IconButton onClick={(e) => openTwitter()}>
+                <IconButton  className='ttbtn' onClick={(e) => openTwitter()}>
                     <TwitterIcon />
                 </IconButton>
                 </div>
@@ -59,7 +63,7 @@ export default function MGrid2() {
             
             <div className="Github" onClick={(e) => openGithub()}>
             <div className="links_style">
-            <IconButton>
+            <IconButton  className='gtbtn'>
                 <GitHubIcon />
             </IconButton>
             </div>

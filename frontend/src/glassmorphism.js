@@ -11,9 +11,15 @@ import Card from './componenets/Card'
 import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
-import SetUpLinks from './componenets/SetLinks'
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import { Stack } from '@mui/material';
+import { useEffect } from 'react';
+
 
 export default function Glassmorphism() {
+
+
 
   const handleSubmit = (e) => {
 
@@ -29,34 +35,54 @@ export default function Glassmorphism() {
     
   }
 
-  
-
-
   const [modal, setModal] = useState(false);
   
   const toggleModal = () => {
     setModal(!modal);
   };
 
+  
+  if (modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+
+  const [twitter, setTwitter] = useState("");
+  const [github, setGithub] = useState("");
+
+  function handleChange1 (event) {
+    setTwitter(event.target.value);
+};
+
+function handleChange2(event) {
+    setGithub(event.target.value);
+
+};
+
+const saveLinks = ()=>{
+
+  if(github==="")
+  localStorage.removeItem('Github')
+
+  
+  if(twitter==="")
+  localStorage.removeItem('Twitter')
+
+localStorage.setItem('Github',github);
+localStorage.setItem('Twitter',twitter);
+
+}
+
+
   const SetLinks = ()=>{
     toggleModal()
-
-    SetUpLinks(modal)
     console.log("pressed");
   }
 
 
   const time = moment().format("HH:mm");
 
-  // const useStyles = makeStyles({
-  //   google: {
-  //     fontFamily:'Quicksand',
-  //     fontSize:50,
-  //     color:white,
-  //   }
-  // })
-
-  // const classes =useStyles(note);
 
   return (
     <div className="glassmorphism">
@@ -114,23 +140,9 @@ export default function Glassmorphism() {
 
                   </div>
 
-                  {/* <Typography className='mlabel'
-                  variant="body2"
-                 color="white"
-                  fontSize={60}
-
-                  alignContent="center"
-
-                  fontFamily={'Quicksand'} >
-                  Google
-                  </Typography> */}
 
 
                   <div className="search-bar">
-
-                    {/* <script async src="https://cse.google.com/cse.js?cx=23f11aef5a1c8419d">
-                    </script>
-                    <div class="gcse-search"></div> */}
 
                     <input type="text"
                       
@@ -147,11 +159,6 @@ export default function Glassmorphism() {
                       required />
 
 
-
-                    {/* <IconButton type="submit"
-                      className="form-submit-btn">
-                      <SearchOutlinedIcon />
-                    </IconButton> */}
 
                   </div>
 
@@ -172,8 +179,8 @@ export default function Glassmorphism() {
                     </Typography>
                     <div className='setting'>
 
-                      <IconButton onClick={ SetLinks}>
-                        <SettingsTwoToneIcon />
+                      <IconButton className='stbtn'  onClick={ SetLinks}>
+                        <SettingsTwoToneIcon sx={{color:'white'}}/>
                       </IconButton>
                     </div>
                   </div>
@@ -225,6 +232,37 @@ export default function Glassmorphism() {
 
 
       </div>
+
+      <div>
+
+
+{modal && (
+    <div className="modal">
+    <div onClick={toggleModal} className="overlay"></div>
+    <div className="modal-content" >
+      <h2>Set up your links</h2>
+      <br /><br />
+      <Stack direction='column' gap='30px' > 
+      <Typography variant='h6'  position={'absolute'} top='90px'>
+        Twitter
+      </Typography>
+      <TextField onChange={handleChange1} value={twitter}  id="outlined-basic" label="type your Twitter handle" variant="outlined" sx={{background:'white'}}/>
+      <br />
+      <Typography variant='h6' position={'absolute'} left='30px' top='230px'>
+        Github
+      </Typography>
+      <TextField onChange={handleChange2} value={github}  id="outlined-basic" label="type your Github handle" variant="outlined" sx={{background:'white'}}/>
+      </Stack>
+
+      <br />
+      <span><a onClick={saveLinks} href="#"></a></span>
+      
+
+    </div>
+  </div>
+)}
+
+</div>
 
     </div>
   );

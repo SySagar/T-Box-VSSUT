@@ -14,21 +14,6 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function MGrid() {
   return (
-    // <div className="box">
-    //   <Grid container spacing={2}>
-    //     <Grid item xs={12} sm={6} md={3}>
-          
-    //       <Paper>1</Paper>
-          
-    //     </Grid>
-    //     <Grid item xs={12} sm={6} md={3}>
-          
-    //       <Paper>1</Paper>
-          
-    //     </Grid>
-       
-    //   </Grid>
-    //   </div>
 
     <div className="box" >
         <div className="Enigma">

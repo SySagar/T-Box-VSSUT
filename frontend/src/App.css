@@ -523,7 +523,7 @@ top: -5px;
    left: 50%;
    transform: translate(-50%, -50%);
    line-height: 1.4;
-   background: #2B65EC;
+   background: #929094;
    padding: 14px 28px;
    border-radius: 3px;
    max-width: 600px;
@@ -537,3 +537,101 @@ top: -5px;
    right: 10px;
    padding: 5px 7px;
  }
+
+ /*This is css for buttons to save links*/
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+span{
+  position: relative;
+  display: inline-flex;
+  width: 120px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "Save";
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+  content: "sure?";
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/*This is chill spot button css*/
+
+.ytnbtn{
+
+  transition-duration: 2s;
+ 
+}
+
+
+.ytbtn:hover{
+  scale: 1.2;
+  filter: drop-shadow(2px 2px 1px rgb(245, 38, 27))
+}
+
+
+.ttbtn{
+
+  transition-duration: 2s;
+ 
+}
+
+
+.ttbtn:hover{
+  scale: 1.2;
+  filter: drop-shadow(2px 2px 1px rgb(51, 180, 249))
+}
+
+
+.gtbtn{
+
+  transition-duration: 2s;
+ 
+}
+
+
+.gtbtn:hover{
+  scale: 1.2;
+  filter: drop-shadow(2px 2px 1px rgb(40, 244, 44))
+}
+
+.Enigma:hover{
+  scale: 1.1;
+}
+
+.IIC:hover{
+  scale: 1.1;
+}
+
+.Robotics:hover{
+  scale: 1.1;
+}
