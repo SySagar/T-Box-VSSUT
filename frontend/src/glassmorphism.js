@@ -173,8 +173,8 @@ localStorage.setItem('Twitter',twitter);
                   <div className="cheader">
                     <Typography
                       variant="h5"
-                      fontFamily="Quicksand"
-                      color="white">
+                      style={{ fontFamily: "Quicksand", color: "white" }}
+                      >
                       Chill spots
                     </Typography>
                     <div className='setting'>
@@ -199,8 +199,7 @@ localStorage.setItem('Twitter',twitter);
                   <div className="cheader">
                     <Typography
                       variant="h5"
-                      fontFamily="Quicksand"
-                      color="white">
+                      style={{ fontFamily: "Quicksand", color: "white" }}>
                       Clubs and Socieities
                     </Typography>
                   </div>

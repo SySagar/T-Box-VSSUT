@@ -436,7 +436,7 @@ flex-grow: 0;
 .links_style{
 
 padding: 10px;
-margin-left: 42px;
+margin-left: 50px;
 margin-top: 20px;
 background: #29282a;
 /* M3/sys/dark/outline
@@ -586,10 +586,15 @@ span a:hover{
 
 /*This is chill spot button css*/
 
-.ytnbtn{
+.ttbtn,.gtbtn{
 
+  scale: 1.35;
   transition-duration: 2s;
  
+}
+
+.ytbtn{
+  scale:1.4;
 }
 
 
@@ -635,3 +640,9 @@ span a:hover{
 .Robotics:hover{
   scale: 1.1;
 }
+
+.links_style{
+  border-radius: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Prompt:wght@600&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap');
