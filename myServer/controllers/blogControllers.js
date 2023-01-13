@@ -1,4 +1,4 @@
-const posts = require('../models/posts')
+const posts = require('../models/blogs')
 const blog_create = async (req,res)=>{
     
     const postNo = await posts.countDocuments()+1

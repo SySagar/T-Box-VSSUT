@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
     title: {type: String,required : [true, 'name is required']},
-    snippet:{type: String,required : [true, 'snippet is required']},
+    content:{type: String,required : [true, 'snippet is required']},
     no: Number
     });
 
