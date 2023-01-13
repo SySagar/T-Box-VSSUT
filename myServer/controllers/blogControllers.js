@@ -4,7 +4,7 @@ const blog_create = async (req,res)=>{
     const postNo = await posts.countDocuments()+1
     const newPost = new posts({
         title: req.body.title,
-        snippet: req.body.snippet,
+        content: req.body.content,
         no: postNo
     });
     
