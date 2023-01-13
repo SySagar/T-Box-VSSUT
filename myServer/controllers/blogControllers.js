@@ -21,11 +21,6 @@ const blog_create = async (req,res)=>{
  
 const blog_get = async (req,res)=>{
 
-    // const newPost = new posts({
-    //     title: res.body.title,
-    //     snippet: res.body.snippet,
-    //     no: postNo
-    // });
     let x = Math.random();   
     const count =  await posts.countDocuments();
     posts.findOne({no : Math.ceil(x*count)})
