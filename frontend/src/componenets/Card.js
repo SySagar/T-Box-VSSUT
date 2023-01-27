@@ -11,17 +11,17 @@ export default function MCard() {
     const [content, setContent] = useState()
     useEffect(() => {
 
-        fetch('https://t-box-backend.onrender.com/get-blog', {
+        fetch('https://confesso.onrender.com/api', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
-            
+            console.log(data);
         })
     }, [])
 
     const onRefresh = async () => {
 
-        fetch('https://t-box-backend.onrender.com/get-blog', {
+        fetch('https://confesso.onrender.com/api', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
