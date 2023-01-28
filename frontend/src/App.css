@@ -467,6 +467,7 @@ left: 59px;
 top: -5px;
 }
 
+
 .circle2{
 
   left: 950px;
@@ -646,3 +647,55 @@ span a:hover{
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Prompt:wght@600&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap');
+
+.root{
+  padding: 0;
+  margin: 0;
+}
+
+/*This is for todo application integrated*/
+
+
+.btn-modal {
+ background-color: #000000;
+  margin-left: 1150px;
+  margin-bottom: 50px;
+  font-size: 12px;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 6;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+  z-index: 6;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #2B65EC;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 6;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+

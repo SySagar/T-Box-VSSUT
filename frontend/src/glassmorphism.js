@@ -10,6 +10,7 @@ import Lottie from "lottie-react"
 import Card from './componenets/Card'
 import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
+import Todo from './componenets/Todo';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -87,9 +88,13 @@ localStorage.setItem('Twitter',twitter);
   return (
     <div className="glassmorphism">
 
+
       <div className="App">
+        
 
         <div className="todos-container">
+
+        <Todo></Todo>
 
           <div className="circle"></div>
           <div className="circle2"></div>
