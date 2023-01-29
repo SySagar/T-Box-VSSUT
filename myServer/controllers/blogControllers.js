@@ -23,6 +23,9 @@ const blog_get = async (req,res)=>{
 
     let x = Math.random();   
     const count =  await posts.countDocuments();
+
+    
+
     posts.findOne({no : Math.ceil(x*count)})
     .then((result)=>{
         res.send(result)

@@ -7,6 +7,6 @@ const blogController = require('../controllers/blogControllers')
 router.post('/add-blog',blogController.blog_create);
      
 //retrieval of data
-router.get('/api',blogController.blog_get);
+router.get('/blog-get',blogController.blog_get);
      
 module.exports = router;
