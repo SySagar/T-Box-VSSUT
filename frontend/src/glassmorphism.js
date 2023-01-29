@@ -8,15 +8,13 @@ import cat from './animations/cat.json'
 import Lottie from "lottie-react"
 // import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
-import Grid from './componenets/Grid'
 import Grid2 from './componenets/Grid2'
-import Todo from './componenets/Todo';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
 import { useEffect } from 'react';
-
+import TodoMenu from './componenets/TodoMenu'
 
 export default function Glassmorphism() {
 
@@ -28,21 +26,21 @@ export default function Glassmorphism() {
 
   };
 
-  const SearchQuery = (e)=>{
+  const SearchQuery = (e) => {
 
-    var newPageUrl = "https://www.google.com/search?q="+e
+    var newPageUrl = "https://www.google.com/search?q=" + e
 
-    window.open(newPageUrl, "_blank") 
-    
+    window.open(newPageUrl, "_blank")
+
   }
 
   const [modal, setModal] = useState(false);
-  
+
   const toggleModal = () => {
     setModal(!modal);
   };
 
-  
+
   if (modal) {
     document.body.classList.add('active-modal')
   } else {
@@ -52,31 +50,31 @@ export default function Glassmorphism() {
   const [twitter, setTwitter] = useState("");
   const [github, setGithub] = useState("");
 
-  function handleChange1 (event) {
+  function handleChange1(event) {
     setTwitter(event.target.value);
-};
+  };
 
-function handleChange2(event) {
+  function handleChange2(event) {
     setGithub(event.target.value);
 
-};
+  };
 
-const saveLinks = ()=>{
+  const saveLinks = () => {
 
-  if(github==="")
-  localStorage.removeItem('Github')
-
-  
-  if(twitter==="")
-  localStorage.removeItem('Twitter')
-
-localStorage.setItem('Github',github);
-localStorage.setItem('Twitter',twitter);
-
-}
+    if (github === "")
+      localStorage.removeItem('Github')
 
 
-  const SetLinks = ()=>{
+    if (twitter === "")
+      localStorage.removeItem('Twitter')
+
+    localStorage.setItem('Github', github);
+    localStorage.setItem('Twitter', twitter);
+
+  }
+
+
+  const SetLinks = () => {
     toggleModal()
     console.log("pressed");
   }
@@ -90,11 +88,11 @@ localStorage.setItem('Twitter',twitter);
 
 
       <div className="App">
-        
+
 
         <div className="todos-container">
 
-        <Todo></Todo>
+          
 
           <div className="circle"></div>
           <div className="circle2"></div>
@@ -150,7 +148,7 @@ localStorage.setItem('Twitter',twitter);
                   <div className="search-bar">
 
                     <input type="text"
-                      
+
                       id="Google"
                       placeholder="Search something..."
                       name="Google"
@@ -179,13 +177,13 @@ localStorage.setItem('Twitter',twitter);
                     <Typography
                       variant="h5"
                       style={{ fontFamily: "Quicksand", color: "white" }}
-                      >
+                    >
                       Chill spots
                     </Typography>
                     <div className='setting'>
 
-                      <IconButton className='stbtn'  onClick={ SetLinks}>
-                        <SettingsTwoToneIcon sx={{color:'white'}}/>
+                      <IconButton className='stbtn' onClick={SetLinks}>
+                        <SettingsTwoToneIcon sx={{ color: 'white' }} />
                       </IconButton>
                     </div>
                   </div>
@@ -200,7 +198,7 @@ localStorage.setItem('Twitter',twitter);
 
                 </div>
 
-                <div className="down-cards">
+                {/* <div className="down-cards">
                   <div className="cheader">
                     <Typography
                       variant="h5"
@@ -216,12 +214,16 @@ localStorage.setItem('Twitter',twitter);
                     </div>
                   </div>
 
+                </div> */}
+
+              <div className="todo">
+                  <TodoMenu/>
                 </div>
 
 
               </div>
 
-
+                
 
 
             </div>
@@ -240,33 +242,33 @@ localStorage.setItem('Twitter',twitter);
       <div>
 
 
-{modal && (
-    <div className="modal">
-    <div onClick={toggleModal} className="overlay"></div>
-    <div className="modal-content" >
-      <h2 color='white'>Set up your links</h2>
-      <br /><br />
-      <Stack direction='column' gap='30px' > 
-      <Typography variant='h6'  position={'absolute'} top='90px' color={'white'}>
-        Twitter
-      </Typography>
-      <TextField onChange={handleChange1} value={twitter}  id="outlined-basic" label="type your Twitter handle" variant="outlined" sx={{background:'white'}}/>
-      <br />
-      <Typography variant='h6' position={'absolute'} left='30px' top='230px' color={'white'}>
-        Github
-      </Typography>
-      <TextField onChange={handleChange2} value={github}  id="outlined-basic" label="type your Github handle" variant="outlined" sx={{background:'white'}}/>
-      </Stack>
+        {modal && (
+          <div className="modal">
+            <div onClick={toggleModal} className="overlay"></div>
+            <div className="modal-content" >
+              <h2 color='white'>Set up your links</h2>
+              <br /><br />
+              <Stack direction='column' gap='30px' >
+                <Typography variant='h6' position={'absolute'} top='90px' color={'white'}>
+                  Twitter
+                </Typography>
+                <TextField onChange={handleChange1} value={twitter} id="outlined-basic" label="type your Twitter handle" variant="outlined" sx={{ background: 'white' }} />
+                <br />
+                <Typography variant='h6' position={'absolute'} left='30px' top='230px' color={'white'}>
+                  Github
+                </Typography>
+                <TextField onChange={handleChange2} value={github} id="outlined-basic" label="type your Github handle" variant="outlined" sx={{ background: 'white' }} />
+              </Stack>
 
-      <br />
-      <span><a onClick={saveLinks} href="#"></a></span>
-      
+              <br />
+              <span><a onClick={saveLinks} href="#"></a></span>
 
-    </div>
-  </div>
-)}
 
-</div>
+            </div>
+          </div>
+        )}
+
+      </div>
 
     </div>
   );

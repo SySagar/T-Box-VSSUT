@@ -11,7 +11,7 @@ export default function MCard() {
     const [content, setContent] = useState()
     useEffect(() => {
 
-        fetch('https://confesso.onrender.com/api', {
+        fetch('https://confesso.onrender.com/post', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
@@ -21,7 +21,7 @@ export default function MCard() {
 
     const onRefresh = async () => {
 
-        fetch('https://confesso.onrender.com/api', {
+        fetch('https://confesso.onrender.com/post', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
             setContent(data);
@@ -37,7 +37,7 @@ export default function MCard() {
                 
                 <div className="headline">
                     <CardHeader
-                        title='Tip of the day!'
+                        title= {content && content.title}
                     >
                         <Typography variant="body2" color="white">
 
@@ -51,7 +51,7 @@ export default function MCard() {
 
                         <div className="content">
                             <Typography variant="body1" color="white">
-                                {content && content.snippet}
+                                {content  && content.content}
                             </Typography>
                         </div>
 
