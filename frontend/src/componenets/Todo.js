@@ -2,50 +2,11 @@ import React, { useState } from "react";
 import { IconButton } from '@mui/material';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import "../App.css";
-import ClearIcon from '@mui/icons-material/Clear';
-import ListTasks from "../Todos/ListTasks";
-import InputTask from "../Todos/InputTask";
-import Storage from './Storage'
 
 import InnerHTML from 'dangerously-set-html-content'
 
 export default function Todo() {
   const [modal, setModal] = useState(false);
-
-  const [tasks, setTask] = useState({ tasks: [] });
-
-  const addTasks = (task) => {
-    let tempTasks = tasks["tasks"];
-    task = { id: tempTasks.length + 1, text: task, strike: false };
-    tempTasks.push(task);
-    setTask({ tasks: tempTasks });
-
-    Storage(task);
-  };
-
-  const removeTasks = (taskid) => {
-    let tempTasks = tasks["tasks"];
-    let result = [];
-    for (let i = 0; i < tempTasks.length; i++) {
-      console.log(tempTasks[i].id, taskid);
-      if (tempTasks[i].id !== +taskid) {
-        result.push(tempTasks[i]);
-      }
-    }
-    setTask({ tasks: result });
-  };
-
-  const strikeTask = (taskid) => {
-    let tempTasks = tasks["tasks"];
-    let result = [];
-    for (let i = 0; i < tempTasks.length; i++) {
-      if (tempTasks[i].id === +taskid) {
-        tempTasks[i].strike = true
-      }
-      result.push(tempTasks[i]);
-    }
-    setTask({ tasks: result });
-  };
 
   const data = `<!DOCTYPE html>
   <html lang="pt-br">
@@ -73,10 +34,11 @@ export default function Todo() {
           <ul id="todo-list"></ul>
       </div>
   
-      <script src="./script.js"></script>
+      <script src="./Script.js"></script>
   </body>
   
-  </html>`;
+  </html>
+ `;
 
 
   const toggleModal = () => {
@@ -97,7 +59,7 @@ export default function Todo() {
         Open
       </button> */}
       <div className="btn-modal">
-        <IconButton onClick={toggleModal} style={{ color: "red" }} aria-label="delete">
+        <IconButton onClick={toggleModal} style={{ color: "red" }}>
           <FormatListBulletedIcon />
         </IconButton>
       </div>
@@ -118,54 +80,3 @@ export default function Todo() {
 }
 
 
-
-
-// import "./App.css";
-// import ListTasks from "./ListTasks";
-// import InputTask from "./InputTask";
-// import { useState } from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// function App() {
-//   const [tasks, setTask] = useState({ tasks: [] });
-
-//   const addTasks = (task) => {
-//     let tempTasks = tasks["tasks"];
-//     task = { id: tempTasks.length + 1, text: task, strike: false};
-//     tempTasks.push(task);
-//     setTask({ tasks: tempTasks });
-//   };
-
-//   const removeTasks = (taskid) => {
-//     let tempTasks = tasks["tasks"];
-//     let result = [];
-//     for (let i = 0; i < tempTasks.length; i++) {
-//       console.log(tempTasks[i].id, taskid);
-//       if (tempTasks[i].id !== +taskid) {
-//         result.push(tempTasks[i]);
-//       }
-//     }
-//     setTask({ tasks: result });
-//   };
-
-//   const strikeTask = (taskid) => {
-//     let tempTasks = tasks["tasks"];
-//     let result = [];
-//     for (let i = 0; i < tempTasks.length; i++) {
-//       if (tempTasks[i].id === +taskid) {
-//         tempTasks[i].strike = true
-//       }
-//       result.push(tempTasks[i]);
-//     }
-//     setTask({ tasks: result });
-//   };
-
-//   return (
-//     <div className="App container text-center">
-//       <InputTask addTaskCallback={addTasks} />
-//       <ListTasks tasksList={tasks["tasks"]} removeTaskCallback={removeTasks} strikeTaskCallback={strikeTask}/>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -244,15 +244,15 @@ localStorage.setItem('Twitter',twitter);
     <div className="modal">
     <div onClick={toggleModal} className="overlay"></div>
     <div className="modal-content" >
-      <h2>Set up your links</h2>
+      <h2 color='white'>Set up your links</h2>
       <br /><br />
       <Stack direction='column' gap='30px' > 
-      <Typography variant='h6'  position={'absolute'} top='90px'>
+      <Typography variant='h6'  position={'absolute'} top='90px' color={'white'}>
         Twitter
       </Typography>
       <TextField onChange={handleChange1} value={twitter}  id="outlined-basic" label="type your Twitter handle" variant="outlined" sx={{background:'white'}}/>
       <br />
-      <Typography variant='h6' position={'absolute'} left='30px' top='230px'>
+      <Typography variant='h6' position={'absolute'} left='30px' top='230px' color={'white'}>
         Github
       </Typography>
       <TextField onChange={handleChange2} value={github}  id="outlined-basic" label="type your Github handle" variant="outlined" sx={{background:'white'}}/>

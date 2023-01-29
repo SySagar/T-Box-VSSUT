@@ -1,7 +1,7 @@
-let todoInput = document.getElementById("todo-input")
-let btnAdd = document.getElementById("btn-add")
-let btnDel = document.getElementById("btn-del")
-let todoList = document.getElementById("todo-list")
+var todoInput = document.getElementById("todo-input")
+var btnAdd = document.getElementById("btn-add")
+var btnDel = document.getElementById("btn-del")
+var todoList = document.getElementById("todo-list") 
 
 
 btnAdd.addEventListener("click", Create);
@@ -12,7 +12,7 @@ var arrayList = [];
 function Create() {
     let task = todoInput.value;
     if (task === "") {
-        alert("Digite uma task!")
+        alert("No task!")
     } else {
         let list = CreateList(task)
         todoList.appendChild(list);
@@ -62,6 +62,7 @@ function Clear() {
 onload = () => {
     let ls = localStorage.getItem("list") 
     todoList.innerHTML = ls
+    console.log("happenig");
 }
 
 function delTask(e) {

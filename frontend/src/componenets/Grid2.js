@@ -26,6 +26,8 @@ const openYT= async () => {
 const openGithub= async () => {
 
     const github = localStorage.getItem('Github');
+    if(github==null)
+    github=""
     window.open('https://github.com/'+github, "_blank")
 
 }
@@ -33,6 +35,8 @@ const openGithub= async () => {
 const openTwitter= async () => {
 
     const twitter = localStorage.getItem('Twitter');
+    if(twitter==null)
+    twitter=""
     window.open('https://twitter.com/'+twitter, "_blank")
 
 }
