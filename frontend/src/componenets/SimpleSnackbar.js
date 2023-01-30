@@ -5,6 +5,9 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function SimpleSnackbar() {
+
+
+
   const [state, setState] = React.useState({
     open: false,
     vertical: 'top',
@@ -14,6 +17,7 @@ export default function SimpleSnackbar() {
 
   const handleClick = (newState) => () => {
     setState({ open: true, ...newState });
+ 
   };
 
   const handleClose = () => {

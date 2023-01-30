@@ -62,6 +62,7 @@ export default function Glassmorphism() {
 
   const saveLinks = () => {
 
+    console.log("testbg");
     if (github === "")
       localStorage.removeItem('Github')
 
@@ -265,7 +266,11 @@ export default function Glassmorphism() {
                 <TextField onChange={handleChange2} value={github} id="outlined-basic" label="type your Github handle" variant="outlined" sx={{ background: 'white' }} />
               </Stack>
               <br />
-              <Snackbar onClick={saveLinks}></Snackbar>
+
+              <Box  onClick={saveLinks}>
+
+              <Snackbar></Snackbar>
+              </Box>
 
               <br />
               
