@@ -4,6 +4,8 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+align-items: center;
 
 }
 
@@ -62,9 +64,18 @@ height: 140vh;
 }
 }
 
+.enigma{
+  position: absolute;
+  scale: 0.2;
+  transform: translate(3700px, -1800px);
+}
+
 .glassmorphism .App{
+  justify-content: center;
+align-items: center;
   padding: 0;
   margin:0;
+  height: 100vh;
 }
 .form{
 /* Auto layout */
@@ -103,6 +114,8 @@ z-index: 2;
   width: 200px;
   height: 50px;
   margin-left: 300px;
+  scale: 1.1;
+  transform: translate(30px, -20px);
   z-index: 3;
   align-self: flex-start;
 }
@@ -199,36 +212,28 @@ flex-grow: 0;
 .circle
 {
 position: absolute;
-width: 389px;
-height: 389px;
-left: 49px;
-top: -55px;
+width: 349px;
+height: 349px;
+transform: translate(50px, -70px);
 
 background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
 /* Inside auto layout */
 
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+
 }
 
 .circle2{
   position: absolute;
-  width: 489px;
-  height: 489px;
-  bottom: -280px;
-  left: 944px;
+  width: 449px;
+  height: 449px;
+  top: 460px;
+  transform: translate(50px, 0px);
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   /* overflow: hidden; */
   /* Inside auto layout */
-  
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  z-index: 1;
+
 }
 
 .headline{
@@ -273,6 +278,7 @@ z-index: 0;
   height:60px; 
   border-radius:15px;
   margin-left: 280px;
+  margin-top: 95px;
   border:none;
   background-color:rgba(255,255,255,0.5);
   color:black;
@@ -328,7 +334,7 @@ input:hover {
 }
 
 .down-cards-layout{
-  display: absolute;
+  display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 22px;
@@ -346,7 +352,7 @@ flex-grow: 0;
 .setting
 {
   padding-left: 150px;
-  margin-left: 55px;
+  margin-left: 80px;
 }
 
 .down-cards
@@ -378,12 +384,12 @@ flex-grow: 1;
 
 .todo{
   position: absolute;
-  left: 800px;
+  right: 50px;
   bottom: 20px;
   scale: 1.1;
   border-color: rgb(93, 92, 92);
   border: 10px;
-  
+  z-index: 5;
 }
 
 .Header{
@@ -648,15 +654,15 @@ span a:hover{
   filter: drop-shadow(2px 2px 1px rgb(40, 244, 44))
 }
 
-.Enigma:hover{
+.Confession:hover{
   scale: 1.1;
 }
 
-.IIC:hover{
+.Ninja:hover{
   scale: 1.1;
 }
 
-.Robotics:hover{
+.pokemon:hover{
   scale: 1.1;
 }
 

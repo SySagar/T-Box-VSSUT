@@ -8,12 +8,12 @@ import { useState } from 'react';
 export default function ImageCard({clubName, clubImage}) {
 
   const openSite = (clubName)=>{
-    if(clubName==="Enigma")
-    window.open('https://enigmavssut.com/', '_blank');
-    if(clubName==="IIC")
-    window.open('https://idea-innovation-cell-vssut.github.io/version_1/', '_blank');
-    if(clubName==="Robotics")
-    window.open('https://www.vssutrobotics.com/', '_blank');
+    if(clubName==="Confession")
+    window.open('https://confesso-0paf.onrender.com/', '_blank');
+    if(clubName==="pokemon")
+    window.open('https://pokemon-ar.netlify.app/', '_blank');
+    if(clubName==="Ninja")
+    window.open('https://sambit32.itch.io/ninja-frog', '_blank');
   }
 
   const [state, setState] = useState({

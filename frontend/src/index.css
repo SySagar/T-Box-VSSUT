@@ -1,5 +1,7 @@
 body {
   overflow-x:hidden;
+  justify-content: center;
+  overflow-y: hidden;
   margin: 0;
   
   /* padding: 0;
@@ -18,11 +20,6 @@ code {
     monospace;
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-
-}
 
 
 
@@ -32,3 +29,4 @@ code {
   max-width: 400px;
   margin: 0 auto;
 }
+

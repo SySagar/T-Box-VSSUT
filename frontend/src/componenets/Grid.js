@@ -16,16 +16,16 @@ export default function MGrid() {
   return (
 
     <div className="box" >
-        <div className="Enigma">
-            <ImageCard clubName={"Enigma"} clubImage={"/enigma.jpeg"}/>
+        <div className="Confession">
+            <ImageCard clubName={"Confession"} clubImage={"/confession.png"}/>
         </div>
 
-        <div className="Robotics">
-        <ImageCard clubName={"Robotics"} clubImage={"/robotics.png"}/>
+        <div className="pokemon">
+        <ImageCard clubName={"pokemon"} clubImage={"/pikachu.png"}/>
         </div>
 
-        <div className="IIC">
-        <ImageCard clubName={"IIC"} clubImage={"/IIC.png"}/>
+        <div className="Frog Ninja">
+        <ImageCard clubName={"Ninja"} clubImage={"/frogy.png"}/>
         </div>
     </div>
     

@@ -31,23 +31,20 @@ export default function MCard() {
     }
 
     return (
-        <Card elevation={4}>
+        <Card elevation={4} >
              <div className="mcard">
             
                 
                 <div className="headline">
-                    <CardHeader
+                    <CardHeader 
                         title= {content && content.title}
                     >
-                        <Typography variant="body2" color="white">
-
-                            {content && content.title}
-                        </Typography>
+                        
                     </CardHeader>
                 </div>
 
                 <div className="supporting-text">
-                    <CardContent>
+                    <CardContent sx={{ my: -8 }}>
 
                         <div className="content">
                             <Typography variant="body1" color="white">
@@ -60,7 +57,7 @@ export default function MCard() {
                     </CardContent>
 
                         <div className="refresh">
-                        <IconButton  onClick={(e) => onRefresh()}>
+                        <IconButton   onClick={(e) => onRefresh()}>
                                 <RefreshIcon />
                             </IconButton>
                         </div>

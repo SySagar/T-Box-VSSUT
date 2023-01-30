@@ -9,12 +9,13 @@ import Lottie from "lottie-react"
 // import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './componenets/Card'
 import Grid2 from './componenets/Grid2'
+import MGrid from './componenets/Grid';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
-import { useEffect } from 'react';
 import TodoMenu from './componenets/TodoMenu'
+import Snackbar from './componenets/SimpleSnackbar';
 
 export default function Glassmorphism() {
 
@@ -86,20 +87,24 @@ export default function Glassmorphism() {
   return (
     <div className="glassmorphism">
 
+     
 
       <div className="App">
 
 
         <div className="todos-container">
 
-          
+        <div className="enigma">
+        <img src="enigma.jpeg" alt="" />
+      </div>
 
           <div className="circle"></div>
-          <div className="circle2"></div>
+          
 
           <div className="cat">
             <Lottie animationData={cat}></Lottie>
           </div>
+          <div className="circle2"></div>
 
 
           <form className="form" onSubmit={handleSubmit}>
@@ -107,8 +112,10 @@ export default function Glassmorphism() {
 
 
             <div className="fullcontent">
+              
 
               <div className="main">
+
 
                 <div className="Header">
 
@@ -198,32 +205,27 @@ export default function Glassmorphism() {
 
                 </div>
 
-                {/* <div className="down-cards">
+                <div className="down-cards">
                   <div className="cheader">
                     <Typography
                       variant="h5"
                       style={{ fontFamily: "Quicksand", color: "white" }}>
-                      Clubs and Socieities
+                      Our Projects
                     </Typography>
                   </div>
 
                   <div className="frame3">
                     <div className="clubs">
 
-                      <Grid />
+                      <MGrid />
                     </div>
                   </div>
 
-                </div> */}
-
-              <div className="todo">
-                  <TodoMenu/>
                 </div>
-
 
               </div>
 
-                
+
 
 
             </div>
@@ -236,8 +238,11 @@ export default function Glassmorphism() {
 
         </div>
 
+        
+
 
       </div>
+      
 
       <div>
 
@@ -259,16 +264,25 @@ export default function Glassmorphism() {
                 </Typography>
                 <TextField onChange={handleChange2} value={github} id="outlined-basic" label="type your Github handle" variant="outlined" sx={{ background: 'white' }} />
               </Stack>
+              <br />
+              <Snackbar onClick={saveLinks}></Snackbar>
 
               <br />
-              <span><a onClick={saveLinks} href="#"></a></span>
+              
 
 
             </div>
+            
           </div>
         )}
 
+<div className="todo">
+                  <TodoMenu />
+                </div>
+
       </div>
+
+     
 
     </div>
   );
