@@ -19,7 +19,23 @@ import Snackbar from './componenets/SimpleSnackbar';
 
 export default function Glassmorphism() {
 
+// Function to generate random number
+function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
+
+
+const start = () => {
+
+  
+  const k = randomNumber(1,3)
+  
+  let a = Math.round(k);
+let audio = new Audio(a+".mp3")
+
+  audio.play()
+}
 
   const handleSubmit = (e) => {
 
@@ -102,7 +118,7 @@ export default function Glassmorphism() {
           <div className="circle"></div>
           
 
-          <div className="cat">
+          <div className="cat" onClick={start}> 
             <Lottie animationData={cat}></Lottie>
           </div>
           <div className="circle2"></div>
