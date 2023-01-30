@@ -257,6 +257,9 @@ let audio = new Audio(a+".mp3")
 
         
 
+        <div className="todo">
+                  <TodoMenu />
+                </div>
 
       </div>
       
@@ -293,13 +296,12 @@ let audio = new Audio(a+".mp3")
 
 
             </div>
+
+            
             
           </div>
         )}
 
-<div className="todo">
-                  <TodoMenu />
-                </div>
 
       </div>
 

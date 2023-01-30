@@ -1,25 +1,13 @@
 {
   "short_name": "T-Box",
   "name": "T-Box",
-  "icons": [
-    {
-      "src": "t-box.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "t-box.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "t-box.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
+  "version": "0.0.1",
+    "manifest_version": 2,
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
   "background_color": "#ffffff"
 }
