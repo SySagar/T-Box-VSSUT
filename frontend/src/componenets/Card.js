@@ -21,8 +21,23 @@ export default function MCard() {
 
             setContent(data);
             console.log(data);
+
+            
+
         })
     }, [])
+
+    const [tog, setToggle] = useState(0)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          onRefresh()
+          setToggle(!tog)
+        }, 15000);
+        return () => clearTimeout(timer);
+      }, [tog]);
+      
+
+ 
 
     const onRefresh = async () => {
 
