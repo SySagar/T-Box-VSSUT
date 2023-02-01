@@ -69,7 +69,7 @@ export default function MCard() {
                 </div>
 
                 <div className="supporting-text">
-                    <CardContent sx={{ my: -8 }}>
+                    <CardContent sx={[{ marginBlock: -9 },{maxWidth:320}]}>
 
                         <div className="content">
                             <Typography variant="body1" color="white">

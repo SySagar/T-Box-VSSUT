@@ -907,7 +907,8 @@ hr{
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
- white-space: nowrap;
+ 
+ height: 70px;
 }
 
 .content::-webkit-scrollbar {
@@ -916,7 +917,7 @@ hr{
 
 .headline{
   columns: #fff;
-  width: 250px;
+  width: 270px;
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -925,4 +926,8 @@ hr{
 
 .headline::-webkit-scrollbar {
   display: none;
+}
+
+.refresh{
+  transform: translate(0px,-30px);
 }
