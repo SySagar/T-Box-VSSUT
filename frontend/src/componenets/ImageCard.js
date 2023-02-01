@@ -13,7 +13,7 @@ export default function ImageCard({clubName, clubImage}) {
     if(clubName==="pokemon")
     window.open('https://pokemon-ar.netlify.app/', '_blank');
     if(clubName==="Ninja")
-    window.open('https://sambit32.itch.io/ninja-frog', '_blank');
+    window.open('https://sambit32.itch.io/merlin-war', '_blank');
   }
 
   const [state, setState] = useState({
