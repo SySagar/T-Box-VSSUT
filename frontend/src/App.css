@@ -75,7 +75,7 @@ height: 140vh;
 align-items: center;
   padding: 0;
   margin:0;
-  height: 100vh;
+  height: 120vh;
 }
 .form{
 /* Auto layout */
@@ -901,4 +901,28 @@ hr{
   -webkit-backdrop-filter: blur( 18px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.content{
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+ white-space: nowrap;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.headline{
+  columns: #fff;
+  width: 250px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+ white-space: nowrap;
+}
+
+.headline::-webkit-scrollbar {
+  display: none;
 }

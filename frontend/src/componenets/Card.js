@@ -14,6 +14,11 @@ export default function MCard() {
         fetch('https://confesso.onrender.com/post', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
+
+            
+            if(!data)
+            onRefresh()
+
             setContent(data);
             console.log(data);
         })
@@ -24,6 +29,10 @@ export default function MCard() {
         fetch('https://confesso.onrender.com/post', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
+
+            if(!data)
+            onRefresh()
+
             setContent(data);
            
         })
@@ -37,6 +46,7 @@ export default function MCard() {
                 
                 <div className="headline">
                     <CardHeader 
+                        sx={{color:'#9494b8'}}
                         title= {content && content.title}
                     >
                         
