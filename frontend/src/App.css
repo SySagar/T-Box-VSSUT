@@ -547,18 +547,51 @@ align-items: center;
 
 @media (min-width: 600px) and (max-width:650px){ 
 .todos-container{
-  margin-left: 5vh;
+  margin-left: 10vh;
+ margin-top: 30px;
+}
+
+.timeAndDate
+{
+  margin-top: 140px;
+}
+
+.search-bar{
+  padding-top: 55px;
+}
+
+.down-cards-layout{
+  padding-top: 60px;
+}
+
+.todo{padding-top: 100px;
 }
 }
 @media (min-width: 550px) and (max-width:600px){ 
   .todos-container{
     margin-left: 10vh;
+    margin-top: 30px;
   }
+
+  .timeAndDate
+{
+  margin-top: 50px;
+}
+
   }
   @media (min-width: 500px) and (max-width:550px){ 
     .todos-container{
       margin-left: 15vh;
+      margin-top: 50px;
     }
+
+    .timeAndDate
+{
+  margin-top: 50px;
+}
+
+.todo{padding-top: 100px;
+}
     }
     @media (min-width: 450px) and (max-width:500px){ 
       .todos-container{
@@ -566,6 +599,21 @@ align-items: center;
       }
         form {
           width: 140vw !important;
+      }
+      .timeAndDate
+      {
+        margin-top: 140px;
+      }
+
+      .search-bar{
+        padding-top: 55px;
+      }
+
+      .down-cards-layout{
+        padding-top: 60px;
+      }
+
+      .todo{padding-top: 100px;
       }
       }
       @media (min-width: 400px) and (max-width:450px){ 
@@ -575,6 +623,22 @@ align-items: center;
         form {
           width: 140vw !important;
       }
+
+      .timeAndDate
+      {
+        margin-top: 140px;
+      }
+
+      .search-bar{
+        padding-top: 55px;
+      }
+
+      .down-cards-layout{
+        padding-top: 60px;
+      }
+
+      .todo{padding-top: 100px;
+      }
         }
         @media (min-width: 350px) and (max-width:400px){ 
           .todos-container{
@@ -583,6 +647,23 @@ align-items: center;
           form {
             width: 140vw !important;
         }
+
+        .timeAndDate
+      {
+        margin-top: 140px;
+      }
+
+      .search-bar{
+        padding-top: 55px;
+      }
+
+      .todo{
+        padding-top: 80px;
+      }
+
+      .down-cards-layout{
+        padding-top: 60px;
+      }
           }
           @media (min-width: 300px) and (max-width:350px){ 
             .todos-container{
@@ -591,6 +672,23 @@ align-items: center;
             form {
               width: 140vw !important;
           }
+          .timeAndDate
+          {
+            margin-top: 140px;
+          }
+    
+          .search-bar{
+            padding-top: 65px;
+          }
+    
+          .todo{
+            padding-top: 80px;
+          }
+    
+          .down-cards-layout{
+            padding-top: 75px;
+          }
+
             }
 @media (min-width: 320px) and (max-width:1023px){ 
 
@@ -611,6 +709,16 @@ align-items: center;
     border: 10px;
     z-index: 5;
   }
+
+
+  @media screen and (max-width: 694px) { 
+    .todo{
+      position: absolute;
+      
+  transform: translate(40px, 120%);
+    }
+  }
+
   .Header{
     width:auto;
   }
@@ -703,6 +811,15 @@ align-items: center;
    position: fixed;
    z-index: 7;
  }
+
+ @media screen and (max-width: 694px) { 
+  .overlay,.modal{
+    
+    min-width:100%; 
+    min-height: 100%; 
+    
+  }
+}
  
  .overlay {
    background: rgba(49,49,49,0.8);
@@ -721,6 +838,8 @@ align-items: center;
    min-width: 300px;
    z-index: 7;
  }
+
+
  
  .close-modal {
    position: absolute;
