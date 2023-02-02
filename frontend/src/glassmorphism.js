@@ -111,9 +111,9 @@ let audio = new Audio(a+".mp3")
 
         <div className="todos-container">
 
-        <div className="enigma">
+        {/* <div className="enigma">
         <img src="enigma.jpeg" alt="" />
-      </div>
+        </div> */}
 
           <div className="circle"></div>
           
@@ -257,9 +257,6 @@ let audio = new Audio(a+".mp3")
 
         
 
-        <div className="todo">
-                  <TodoMenu />
-                </div>
 
       </div>
       
@@ -296,14 +293,13 @@ let audio = new Audio(a+".mp3")
 
 
             </div>
-
-            
             
           </div>
         )}
-
-
       </div>
+      <div className="todo">
+                  <TodoMenu />
+                </div>
 
      
 
