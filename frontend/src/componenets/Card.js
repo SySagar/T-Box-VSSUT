@@ -5,6 +5,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import { IconButton, Typography } from '@mui/material';
 import RefreshIcon from '@mui/icons-material/Refresh';
+import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
 export default function MCard() {
 
@@ -32,7 +33,7 @@ export default function MCard() {
         const timer = setTimeout(() => {
           onRefresh()
           setToggle(!tog)
-        }, 15000);
+        }, 10000);
         return () => clearTimeout(timer);
       }, [tog]);
       
@@ -41,7 +42,7 @@ export default function MCard() {
 
     const onRefresh = async () => {
 
-        fetch('https://confesso.onrender.com/post', {
+        fetch('https://www.boredapi.com/api/activity', {
             method: 'GET'
         }).then(res => res.json()).then((data) => {
 
@@ -54,6 +55,20 @@ export default function MCard() {
 
     }
 
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+      setModal(!modal);
+    };
+  
+  
+
+  
+
+    const packages = () =>{
+        toggleModal()
+    }
+
     return (
         <Card elevation={4} >
              <div className="mcard">
@@ -61,19 +76,20 @@ export default function MCard() {
                 
                 <div className="headline">
                     <CardHeader 
+                    
                         sx={{color:'#9494b8'}}
-                        title= {content && content.title}
+                        title= {content && "What to do today?"}
                     >
                         
                     </CardHeader>
                 </div>
 
                 <div className="supporting-text">
-                    <CardContent sx={[{ marginBlock: -9 },{maxWidth:320}]}>
+                    <CardContent sx={[{ marginBlock: -8 },{maxWidth:320}]}>
 
                         <div className="content">
                             <Typography variant="body1" color="white">
-                                {content  && content.content}
+                                {content  && content.activity}
                             </Typography>
                         </div>
 
@@ -90,6 +106,23 @@ export default function MCard() {
                 </div>
 
                 </div>
+
+
+                {modal && (
+          <div className="modal">
+            <div onClick={toggleModal} className="overlay"></div>
+            <div className="modal-content" >
+              <h2 color='white'>Set up your links</h2>
+              <br /><br />
+
+
+            </div>
+
+            
+            
+          </div>
+        )}
+
          </Card>
         
     )
