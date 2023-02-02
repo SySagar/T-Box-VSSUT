@@ -215,14 +215,14 @@ flex-grow: 0;
 {
 position: absolute;
 width: 348px;
-height: 407px;
-transform: translate(50px, -70px);
+height: 348px;
+transform: translate(70px, -70px);
 
 background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
 /* Inside auto layout */
 top: 20px;
-left: 10px;
+left: 100px;
 
 }
 
@@ -231,7 +231,7 @@ left: 10px;
   width: 449px;
   height: 449px;
   top: 460px;
-  transform: translate(50px, 0px);
+  transform: translate(100px, 0px);
   
   background: radial-gradient(55.8% 55.8% at 50% 50%, #FF00E5 0%, rgba(73, 0, 255, 0.449641) 55.04%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   /* overflow: hidden; */
@@ -485,7 +485,7 @@ transform: scale(1.5);
 
 @media (max-width: 1770px) { 
  .circle2{
-  left:800px;
+  left:840px;
   bottom: 20px;
  }
  
@@ -497,6 +497,9 @@ transform: scale(1.5);
   }
   .todo{
     right: 50px;
+  }
+  .cat{
+    transform: translate(-80px, -20px);
   }
 }
   @media (max-width: 1170px) { 
@@ -533,7 +536,7 @@ margin-top: 150px;
   }
   .form{
     width: 90vw;
-height: 90%;
+height: 95%;
 max-height: 200vh;
 display: flex;
 justify-content: center;
@@ -667,11 +670,11 @@ align-items: center;
   background: radial-gradient(55.8% 55.8% at 50% 50%, rgba(219, 0, 255, 0.91) 0%, rgba(73, 0, 255, 0.449641) 42.5%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   
   /* Inside auto layout */
-  top: 120vh;
-  left: 50px;
+  top: 116vh;
+  left: 92px;
   
   }
-  .css-pgkxs3-MuiPaper-root-MuiCard-root{
+  .cardm{
     position: relative;
     bottom: 80px;
   }

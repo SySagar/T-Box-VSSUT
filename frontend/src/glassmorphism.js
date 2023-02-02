@@ -161,7 +161,7 @@ let audio = new Audio(a+".mp3")
                     </div>
 
 
-                    <div >
+                    <div className="cardm" >
                       <Card />
                     </div>
 
