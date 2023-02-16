@@ -22,16 +22,10 @@
       "strict_min_version": "109.0"
     }
   },
-  "icons": [
-    {
-      "src": "./t-box1.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "./t-box2.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "icons": {
+  "16": "t-box.png",
+  "32": "t-box.png",
+  "48": "t-box.png",
+  "128": "t-box.png"
+  }
 }
